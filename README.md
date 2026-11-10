@@ -298,7 +298,7 @@ Pozycja "Szukaj funkcji" na górze menu. Wpisujesz fragment nazwy lub działu, n
 6. Jeśli build na Androidzie zgłosi zbyt niski `minSdk`, ustaw w `android/app/build.gradle` wartość `23`.
 7. Uruchom aplikację (`flutter run`) lub zbuduj plik instalacyjny (`flutter build apk --release`).
 
-Po pierwszym zalogowaniu na adres operatora trzeba potwierdzić adres e-mail i wybrać w menu "Odśwież konto". Wtedy rola operatora zaczyna działać.
+Po pierwszym zalogowaniu na adres operatora trzeba potwierdzić adres e-mail i wybrać w menu "Odśwież konto". Wtedy rola operatora zaczyna działać..
 
 ---
 
