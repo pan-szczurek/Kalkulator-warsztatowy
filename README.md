@@ -267,41 +267,6 @@ Pozycja "Szukaj funkcji" na górze menu. Wpisujesz fragment nazwy lub działu, n
 
 ---
 
-## Bezpieczeństwo i dane
-
-- Konta, hasła i dane użytkowników przechowuje Firebase (Authentication i Cloud Firestore). Aplikacja nie przechowuje haseł.
-- Reguły bazy (`firestore.rules`) egzekwują uprawnienia po stronie serwera: kto czyta, tworzy, edytuje i usuwa wpisy, grupy i profile użytkowników.
-- Role operatora, administratora i członkostwa w grupach działają tylko dla potwierdzonych adresów e-mail.
-- Użytkownik nie może samodzielnie zmienić swojej roli ani usunąć blokady; może zmienić tylko własne imię i nazwisko.
-- Usunięty użytkownik jest blokowany także w regułach bazy.
-- Wpisy ogólne są domyślnie publiczne do odczytu. Można to ograniczyć do zalogowanych jedną zmianą w regułach.
-
----
-
-## Technologia
-
-- **Flutter / Dart** (Material 3), cały kod aplikacji w jednym pliku `main.dart`.
-- **Firebase Authentication** (e-mail i hasło) oraz **Cloud Firestore** (kolekcje: `users`, `posts`, `groups` z podkolekcją `posts`).
-- Pakiety: `firebase_core`, `firebase_auth`, `cloud_firestore`.
-- Własny rysunek tła (`CustomPainter`) z animacją kół zębatych, uniwersalny silnik kalkulatorów (jedna definicja narzędzia: pola, listy wyboru i wzór) oraz wspólne elementy interfejsu w stylu szkła.
-- Docelowa platforma: Android. Konfiguracja dla iOS jest możliwa, ale zbudowanie wersji na iPhone'a wymaga komputera Mac.
-
----
-
-## Konfiguracja projektu
-
-1. Utwórz projekt w konsoli Firebase i włącz **Authentication** z logowaniem **Email/Password**.
-2. Utwórz bazę **Cloud Firestore** (tryb produkcyjny) i w zakładce Rules wklej zawartość `firestore.rules`, a następnie opublikuj.
-3. Dodaj paczki: `flutter pub add firebase_core firebase_auth cloud_firestore`.
-4. Połącz aplikację z projektem narzędziem FlutterFire: `flutterfire configure` (powstaje plik `lib/firebase_options.dart`).
-5. Wpisz adres e-mail głównego operatora (małymi literami) w dwóch miejscach: w `main.dart` przy stałej `kOperatorEmail` oraz w `firestore.rules` w funkcji `operatorEmail`.
-6. Jeśli build na Androidzie zgłosi zbyt niski `minSdk`, ustaw w `android/app/build.gradle` wartość `23`.
-7. Uruchom aplikację (`flutter run`) lub zbuduj plik instalacyjny (`flutter build apk --release`).
-
-Po pierwszym zalogowaniu na adres operatora trzeba potwierdzić adres e-mail i wybrać w menu "Odśwież konto". Wtedy rola operatora zaczyna działać..
-
----
-
 ## Zastrzeżenia
 
 Prędkości skrawania, posuwy, moce skrawania, momenty dokręcania, gęstości materiałów, parametry spawania i dobór metod są wartościami **orientacyjnymi**, opartymi na danych tablicowych i ogólnie przyjętych zasadach. Zależą od narzędzia, maszyny, chłodzenia, sztywności i warunków pracy. Przy ważnych, nośnych lub bezpieczeństwo-krytycznych elementach zawsze porównaj wyniki z katalogiem producenta narzędzia, normami i dokumentacją maszyny. Spawanie konstrukcji nośnych, zbiorników i elementów pod ciśnieniem wymaga technologii wg WPS i spawacza z uprawnieniami. Kody G i M różnią się zależnie od sterowania. Autor nie ponosi odpowiedzialności za skutki użycia wyników bez weryfikacji.**
