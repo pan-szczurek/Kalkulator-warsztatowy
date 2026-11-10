@@ -44,7 +44,7 @@ Aplikacja ma ciemny, "szklany" wygląd: tło z kręcącymi się kołami zębatym
 
 Ekran główny jest celowo prosty: pokazuje tło i wpisy. Na górze po prawej jest ikona menu (trzy kreski), z której otwiera się wysuwane menu ze wszystkimi funkcjami.
 
-**Tło** to ciemny, stalowy gradient z delikatną siatką, dwoma kręcącymi się kołami zębatymi (kręcą się w przeciwne strony, z jednym zegarem, więc obrót jest płynny także przy zmianie ekranu) i sylwetką tokarki na dole. Zamiast rysunku można użyć własnego zdjęcia (np. tokarki lub frezarki): wystarczy dodać plik `assets/tlo.jpg` i zadeklarować go w `pubspec.yaml`.
+**Tło** to ciemny, stalowy gradient z delikatną siatką, dwoma kręcącymi się kołami zębatymi (kręcą się w przeciwne strony, z jednym zegarem, więc obrót jest płynny także przy zmianie ekranu) i sylwetką tokarki na dole.
 
 **Menu (po prawej)** zawiera:
 
